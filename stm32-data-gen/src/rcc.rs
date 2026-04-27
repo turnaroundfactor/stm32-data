@@ -295,8 +295,8 @@ impl ParsedRccs {
         peri_name: &str,
     ) -> Option<stm32_data_serde::chip::core::peripheral::Rcc> {
         const FALLBACKS: &[(&str, &[&str])] = &[
-            ("DCMI", &["DCMI_PSSI"]),
-            ("PSSI", &["DCMI_PSSI"]),
+            ("DCMI", &["DCMI_PSSI", "PSSI"]),
+            ("PSSI", &["DCMI_PSSI", "DCMI"]),
             ("FDCAN1", &["FDCAN12"]),
             ("FDCAN2", &["FDCAN12"]),
             ("ADC", &["ADC1", "ADCDAC"]),
@@ -393,7 +393,7 @@ impl ParsedRccs {
                     } else if rcc_version.starts_with("f2") {
                         maybe_kernel_clock = "PLL1_Q".to_string();
                     } else if rcc_version.starts_with("l1") {
-                        maybe_kernel_clock = "PLL1_VCO_DIV_2".to_string();
+                        maybe_kernel_clock = "PLL1_VCO_DIV2".to_string();
                     } else if rcc_version.starts_with("h7rs") {
                         maybe_kernel_clock = "USB".to_string();
                     } else {
