@@ -628,6 +628,7 @@ pub static PERIMAP: RegexMap<(&str, &str, &str)> = RegexMap::new(&[
     (".*:FDCAN:.*fdcan1_v1_2", ("can", "fdcan_v2", "FDCAN")),
     ("STM32H7[RS].*:FDCANRAM.*", ("fdcanram", "v1", "FDCANRAM")),
     ("STM32H7.*:FDCANRAM.*", ("fdcanram", "h7", "FDCANRAM")),
+    ("STM32N6.*:FDCANRAM.*", ("fdcanram", "h7", "FDCANRAM")),
     (".*:FDCANRAM.*", ("fdcanram", "v1", "FDCANRAM")),
     ("STM32F[124].*:CRC:.*", ("crc", "v1", "CRC")),
     ("STM32L1.*:CRC:.*", ("crc", "v1", "CRC")),
