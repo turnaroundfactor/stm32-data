@@ -1,0 +1,2297 @@
+block/FDCAN:
+  description: Controller area network with flexible data rate (FD)
+  items:
+  - name: CREL
+    description: FDCAN core release register
+    byte_offset: 0
+    fieldset: CREL
+  - name: ENDN
+    description: FDCAN endian register
+    byte_offset: 4
+    fieldset: ENDN
+  - name: DBTP
+    description: FDCAN data bit timing and prescaler register
+    byte_offset: 12
+    fieldset: DBTP
+  - name: TEST
+    description: FDCAN test register
+    byte_offset: 16
+    fieldset: TEST
+  - name: RWD
+    description: FDCAN RAM watchdog register
+    byte_offset: 20
+    fieldset: RWD
+  - name: CCCR
+    description: FDCAN CC control register
+    byte_offset: 24
+    fieldset: CCCR
+  - name: NBTP
+    description: FDCAN nominal bit timing and prescaler register
+    byte_offset: 28
+    fieldset: NBTP
+  - name: TSCC
+    description: FDCAN timestamp counter configuration register
+    byte_offset: 32
+    fieldset: TSCC
+  - name: TSCV
+    description: FDCAN timestamp counter value register
+    byte_offset: 36
+    fieldset: TSCV
+  - name: TOCC
+    description: FDCAN timeout counter configuration register
+    byte_offset: 40
+    fieldset: TOCC
+  - name: TOCV
+    description: FDCAN timeout counter value register
+    byte_offset: 44
+    fieldset: TOCV
+  - name: ECR
+    description: FDCAN error counter register
+    byte_offset: 64
+    fieldset: ECR
+  - name: PSR
+    description: FDCAN protocol status register
+    byte_offset: 68
+    fieldset: PSR
+  - name: TDCR
+    description: FDCAN transmitter delay compensation register
+    byte_offset: 72
+    fieldset: TDCR
+  - name: IR
+    description: FDCAN interrupt register
+    byte_offset: 80
+    fieldset: IR
+  - name: IE
+    description: FDCAN interrupt enable register
+    byte_offset: 84
+    fieldset: IE
+  - name: ILS
+    description: FDCAN interrupt line select register
+    byte_offset: 88
+    fieldset: ILS
+  - name: ILE
+    description: FDCAN interrupt line enable register
+    byte_offset: 92
+    fieldset: ILE
+  - name: GFC
+    description: FDCAN global filter configuration register
+    byte_offset: 128
+    fieldset: GFC
+  - name: SIDFC
+    description: FDCAN standard ID filter configuration register
+    byte_offset: 132
+    fieldset: SIDFC
+  - name: XIDFC
+    description: FDCAN extended ID filter configuration register
+    byte_offset: 136
+    fieldset: XIDFC
+  - name: XIDAM
+    description: FDCAN extended ID and mask register
+    byte_offset: 144
+    fieldset: XIDAM
+  - name: HPMS
+    description: FDCAN high-priority message status register
+    byte_offset: 148
+    fieldset: HPMS
+  - name: NDAT1
+    description: FDCAN new data 1 register
+    byte_offset: 152
+  - name: NDAT2
+    description: FDCAN new data 2 register
+    byte_offset: 156
+  - name: RXFC
+    description: FDCAN Rx FIFO 0 configuration register
+    array:
+      offsets:
+      - 0
+      - 16
+    byte_offset: 160
+    fieldset: RXFC
+  - name: RXFS
+    description: FDCAN Rx FIFO X status register
+    array:
+      offsets:
+      - 0
+      - 16
+    byte_offset: 164
+    fieldset: RXFS
+  - name: RXFA
+    description: CAN Rx FIFO X acknowledge register
+    array:
+      offsets:
+      - 0
+      - 16
+    byte_offset: 168
+    fieldset: RXFA
+  - name: RXBC
+    description: FDCAN Rx buffer configuration register
+    byte_offset: 172
+    fieldset: RXBC
+  - name: RXESC
+    description: FDCAN Rx buffer element size configuration register
+    byte_offset: 188
+    fieldset: RXESC
+  - name: TXBC
+    description: FDCAN Tx buffer configuration register
+    byte_offset: 192
+    fieldset: TXBC
+  - name: TXFQS
+    description: FDCAN Tx FIFO/queue status register
+    byte_offset: 196
+    fieldset: TXFQS
+  - name: TXESC
+    description: FDCAN Tx buffer element size configuration register
+    byte_offset: 200
+    fieldset: TXESC
+  - name: TXBRP
+    description: FDCAN Tx buffer request pending register
+    byte_offset: 204
+    fieldset: TXBRP
+  - name: TXBAR
+    description: FDCAN Tx buffer add request register
+    byte_offset: 208
+    fieldset: TXBAR
+  - name: TXBCR
+    description: FDCAN Tx buffer cancellation request register
+    byte_offset: 212
+    fieldset: TXBCR
+  - name: TXBTO
+    description: FDCAN Tx buffer transmission occurred register
+    byte_offset: 216
+    fieldset: TXBTO
+  - name: TXBCF
+    description: FDCAN Tx buffer cancellation finished register
+    byte_offset: 220
+    fieldset: TXBCF
+  - name: TXBTIE
+    description: FDCAN Tx buffer transmission interrupt enable register
+    byte_offset: 224
+    fieldset: TXBTIE
+  - name: TXBCIE
+    description: FDCAN Tx buffer cancellation finished interrupt enable register
+    byte_offset: 228
+    fieldset: TXBCIE
+  - name: TXEFC
+    description: FDCAN Tx event FIFO configuration register
+    byte_offset: 240
+    fieldset: TXEFC
+  - name: TXEFS
+    description: FDCAN Tx event FIFO status register
+    byte_offset: 244
+    fieldset: TXEFS
+  - name: TXEFA
+    description: FDCAN Tx event FIFO acknowledge register
+    byte_offset: 248
+    fieldset: TXEFA
+  - name: TTTMC
+    description: FDCAN TT trigger memory configuration register
+    byte_offset: 256
+    fieldset: TTTMC
+  - name: TTRMC
+    description: FDCAN TT reference message configuration register
+    byte_offset: 260
+    fieldset: TTRMC
+  - name: TTOCF
+    description: FDCAN TT operation configuration register
+    byte_offset: 264
+    fieldset: TTOCF
+  - name: TTMLM
+    description: FDCAN TT matrix limits register
+    byte_offset: 268
+    fieldset: TTMLM
+  - name: TURCF
+    description: FDCAN TUR configuration register
+    byte_offset: 272
+    fieldset: TURCF
+  - name: TTOCN
+    description: FDCAN TT operation control register
+    byte_offset: 276
+    fieldset: TTOCN
+  - name: TTGTP
+    description: FDCAN TT global time preset register
+    byte_offset: 280
+    fieldset: TTGTP
+  - name: TTTMK
+    description: FDCAN TT time mark register
+    byte_offset: 284
+    fieldset: TTTMK
+  - name: TTIR
+    description: FDCAN TT interrupt register
+    byte_offset: 288
+    fieldset: TTIR
+  - name: TTIE
+    description: FDCAN TT interrupt enable register
+    byte_offset: 292
+    fieldset: TTIE
+  - name: TTILS
+    description: FDCAN TT interrupt line select register
+    byte_offset: 296
+    fieldset: TTILS
+  - name: TTOST
+    description: FDCAN TT operation status register
+    byte_offset: 300
+    fieldset: TTOST
+  - name: TURNA
+    description: FDCAN TUR numerator actual register
+    byte_offset: 304
+    fieldset: TURNA
+  - name: TTLGT
+    description: FDCAN TT local and global time register
+    byte_offset: 308
+    fieldset: TTLGT
+  - name: TTCTC
+    description: FDCAN TT cycle time and count register
+    byte_offset: 312
+    fieldset: TTCTC
+  - name: TTCPT
+    description: FDCAN TT capture time register
+    byte_offset: 316
+    fieldset: TTCPT
+  - name: TTCSM
+    description: FDCAN TT cycle sync mark register
+    byte_offset: 320
+    fieldset: TTCSM
+  - name: TTTS
+    description: FDCAN TT trigger select register
+    byte_offset: 768
+    fieldset: TTTS
+fieldset/CCCR:
+  description: FDCAN CC control register
+  fields:
+  - name: INIT
+    description: Initialization
+    bit_offset: 0
+    bit_size: 1
+  - name: CCE
+    description: Configuration change enable
+    bit_offset: 1
+    bit_size: 1
+  - name: ASM
+    description: ASM restricted operation mode. The restricted operation mode is intended for applications that adapt themselves to different CAN bit rates. The application tests different bit rates and leaves the Restricted operation Mode after it has received a valid frame. In the optional Restricted operation Mode the node is able to transmit and receive data and remote frames and it gives acknowledge to valid frames, but it does not send active error frames or overload frames. In case of an error condition or overload condition, it does not send dominant bits, instead it waits for the occurrence of bus idle condition to resynchronize itself to the CAN communication. The error counters are not incremented. Bit ASM can only be set by software when both CCE and INIT are set to 1. The bit can be reset by the software at any time
+    bit_offset: 2
+    bit_size: 1
+  - name: CSA
+    description: Clock stop acknowledge
+    bit_offset: 3
+    bit_size: 1
+  - name: CSR
+    description: Clock stop request
+    bit_offset: 4
+    bit_size: 1
+  - name: MON
+    description: Bus monitoring mode. Bit MON can only be set by software when both CCE and INIT are set to 1. The bit can be reset by the Host at any time
+    bit_offset: 5
+    bit_size: 1
+  - name: DAR
+    description: Disable automatic retransmission
+    bit_offset: 6
+    bit_size: 1
+  - name: TEST
+    description: Test mode enable
+    bit_offset: 7
+    bit_size: 1
+  - name: FDOE
+    description: FD operation enable
+    bit_offset: 8
+    bit_size: 1
+  - name: BRSE
+    description: FDCAN bit rate switching
+    bit_offset: 9
+    bit_size: 1
+  - name: PXHD
+    description: Protocol exception handling disable
+    bit_offset: 12
+    bit_size: 1
+  - name: EFBI
+    description: Edge filtering during bus integration
+    bit_offset: 13
+    bit_size: 1
+  - name: TXP
+    description: If this bit is set, the FDCAN pauses for two CAN bit times before starting the next transmission after successfully transmitting a frame
+    bit_offset: 14
+    bit_size: 1
+  - name: NISO
+    description: Non ISO operation. If this bit is set, the FDCAN uses the CAN FD frame format as specified by the Bosch CAN FD Specification V1.0
+    bit_offset: 15
+    bit_size: 1
+fieldset/CREL:
+  description: FDCAN core release register
+  fields:
+  - name: DAY
+    description: DAY
+    bit_offset: 0
+    bit_size: 8
+  - name: MON
+    description: MON
+    bit_offset: 8
+    bit_size: 8
+  - name: YEAR
+    description: YEAR
+    bit_offset: 16
+    bit_size: 4
+  - name: SUBSTEP
+    description: SUBSTEP
+    bit_offset: 20
+    bit_size: 4
+  - name: STEP
+    description: STEP
+    bit_offset: 24
+    bit_size: 4
+  - name: REL
+    description: REL
+    bit_offset: 28
+    bit_size: 4
+fieldset/DBTP:
+  description: FDCAN data bit timing and prescaler register
+  fields:
+  - name: DSJW
+    description: 'Synchronization jump width. Must always be smaller than DTSEG2, valid values are 0 to 15. The value used by the hardware is the one programmed, incremented by 1: tSJW = (DSJW + 1) x tq.'
+    bit_offset: 0
+    bit_size: 4
+  - name: DTSEG2
+    description: Data time segment after sample point. Valid values are 0 to 15. The value used by the hardware is the one programmed, incremented by 1, i.e. tBS2 = (DTSEG2 + 1) x tq
+    bit_offset: 4
+    bit_size: 4
+  - name: DTSEG1
+    description: Data time segment before sample point. Valid values are 0 to 31. The value used by the hardware is the one programmed, incremented by 1, i.e. tBS1 = (DTSEG1 + 1) x tq
+    bit_offset: 8
+    bit_size: 5
+  - name: DBRP
+    description: Data bit rate prescaler. The value by which the oscillator frequency is divided to generate the bit time quanta. The bit time is built up from a multiple of this quanta. Valid values for the Baud Rate Prescaler are 0 to 31. The hardware interpreters this value as the value programmed plus 1
+    bit_offset: 16
+    bit_size: 5
+  - name: TDC
+    description: Transceiver delay compensation
+    bit_offset: 23
+    bit_size: 1
+fieldset/ECR:
+  description: FDCAN error counter register
+  fields:
+  - name: TEC
+    description: Transmit error counter. Actual state of the transmit error counter, values between 0 and 255.  When CCCR.ASM is set, the CAN protocol controller does not increment TEC and REC when a CAN protocol error is detected, but CEL is still incremented
+    bit_offset: 0
+    bit_size: 8
+  - name: REC
+    description: Receive error counter. Actual state of the receive error counter, values between 0 and 127
+    bit_offset: 8
+    bit_size: 7
+  - name: RP
+    description: Receive error passive
+    bit_offset: 15
+    bit_size: 1
+  - name: CEL
+    description: 'CAN error logging. The counter is incremented each time when a CAN protocol error causes the transmit error counter or the receive error counter to be incremented. It is reset by read access to CEL. The counter stops at 0xFF; the next increment of TEC or REC sets interrupt flag IR[ELO].  Access type is RX: reset on read.'
+    bit_offset: 16
+    bit_size: 8
+fieldset/ENDN:
+  description: FDCAN endian register
+  fields:
+  - name: ETV
+    description: Endianness test value. The endianness test value is 0x8765 4321
+    bit_offset: 0
+    bit_size: 32
+fieldset/GFC:
+  description: FDCAN global filter configuration register
+  fields:
+  - name: RRFE
+    description: Reject remote frames extended
+    bit_offset: 0
+    bit_size: 1
+  - name: RRFS
+    description: Reject remote frames standard
+    bit_offset: 1
+    bit_size: 1
+  - name: ANFE
+    description: Accept non-matching frames extended
+    bit_offset: 2
+    bit_size: 2
+    enum: ANFE
+  - name: ANFS
+    description: Accept non-matching frames standard
+    bit_offset: 4
+    bit_size: 2
+    enum: ANFS
+fieldset/HPMS:
+  description: FDCAN high-priority message status register
+  fields:
+  - name: BIDX
+    description: Buffer index. Index of Rx FIFO element to which the message was stored. Only valid when MSI[1] = 1
+    bit_offset: 0
+    bit_size: 6
+  - name: MSI
+    description: Message storage indicator
+    bit_offset: 6
+    bit_size: 2
+    enum: MSI
+  - name: FIDX
+    description: Filter index. Index of matching filter element. Range is 0 to RXGFC[LSS] - 1 or RXGFC[LSE] - 1
+    bit_offset: 8
+    bit_size: 7
+  - name: FLST
+    description: Filter list. Indicates the filter list of the matching filter element
+    bit_offset: 15
+    bit_size: 1
+fieldset/IE:
+  description: FDCAN interrupt enable register
+  fields:
+  - name: RFNE
+    description: Rx FIFO X new message interrupt enable
+    bit_offset: 0
+    bit_size: 1
+    array:
+      offsets:
+      - 0
+      - 4
+  - name: RFWE
+    description: Rx FIFO X watermark reached interrupt enable
+    bit_offset: 1
+    bit_size: 1
+    array:
+      offsets:
+      - 0
+      - 4
+  - name: RFFE
+    description: Rx FIFO X full interrupt enable
+    bit_offset: 2
+    bit_size: 1
+    array:
+      offsets:
+      - 0
+      - 4
+  - name: RFLE
+    description: Rx FIFO X message lost interrupt enable
+    bit_offset: 3
+    bit_size: 1
+    array:
+      offsets:
+      - 0
+      - 4
+  - name: HPME
+    description: High-priority message interrupt enable
+    bit_offset: 8
+    bit_size: 1
+  - name: TCE
+    description: Transmission completed interrupt enable
+    bit_offset: 9
+    bit_size: 1
+  - name: TCFE
+    description: Transmission cancellation finished interrupt enable
+    bit_offset: 10
+    bit_size: 1
+  - name: TFEE
+    description: Tx FIFO empty interrupt enable
+    bit_offset: 11
+    bit_size: 1
+  - name: TEFNE
+    description: Tx event FIFO new entry interrupt enable
+    bit_offset: 12
+    bit_size: 1
+  - name: TEFWE
+    description: Tx event FIFO watermark reached interrupt enable
+    bit_offset: 13
+    bit_size: 1
+  - name: TEFFE
+    description: Tx event FIFO full interrupt enable
+    bit_offset: 14
+    bit_size: 1
+  - name: TEFLE
+    description: Tx event FIFO element lost interrupt enable
+    bit_offset: 15
+    bit_size: 1
+  - name: TSWE
+    description: Timestamp wraparound interrupt enable
+    bit_offset: 16
+    bit_size: 1
+  - name: MRAFE
+    description: Message RAM access failure interrupt enable
+    bit_offset: 17
+    bit_size: 1
+  - name: TOOE
+    description: Timeout occurred interrupt enable
+    bit_offset: 18
+    bit_size: 1
+  - name: DRXE
+    description: Message stored to dedicated Rx buffer interrupt enable
+    bit_offset: 19
+    bit_size: 1
+  - name: ELOE
+    description: Error logging overflow interrupt enable
+    bit_offset: 22
+    bit_size: 1
+  - name: EPE
+    description: Error passive interrupt enable
+    bit_offset: 23
+    bit_size: 1
+  - name: EWE
+    description: Warning status interrupt enable
+    bit_offset: 24
+    bit_size: 1
+  - name: BOE
+    description: Bus_Off status enable
+    bit_offset: 25
+    bit_size: 1
+  - name: WDIE
+    description: Watchdog interrupt enable
+    bit_offset: 26
+    bit_size: 1
+  - name: PEAE
+    description: Protocol error in arbitration phase enable
+    bit_offset: 27
+    bit_size: 1
+  - name: PEDE
+    description: Protocol error in data phase enable
+    bit_offset: 28
+    bit_size: 1
+  - name: ARAE
+    description: Access to reserved address enable
+    bit_offset: 29
+    bit_size: 1
+fieldset/ILE:
+  description: FDCAN interrupt line enable register
+  fields:
+  - name: EINT0
+    description: Enable interrupt line 0
+    bit_offset: 0
+    bit_size: 1
+  - name: EINT1
+    description: Enable interrupt line 1
+    bit_offset: 1
+    bit_size: 1
+fieldset/ILS:
+  description: FDCAN interrupt line select register
+  fields:
+  - name: RF0NL
+    description: Rx FIFO 0 new message interrupt line
+    bit_offset: 0
+    bit_size: 1
+  - name: RF0WL
+    description: Rx FIFO 0 watermark reached interrupt line
+    bit_offset: 1
+    bit_size: 1
+  - name: RF0FL
+    description: Rx FIFO 0 full interrupt line
+    bit_offset: 2
+    bit_size: 1
+  - name: RF0LL
+    description: Rx FIFO 0 message lost interrupt line
+    bit_offset: 3
+    bit_size: 1
+  - name: RF1NL
+    description: Rx FIFO 1 new message interrupt line
+    bit_offset: 4
+    bit_size: 1
+  - name: RF1WL
+    description: Rx FIFO 1 watermark reached interrupt line
+    bit_offset: 5
+    bit_size: 1
+  - name: RF1FL
+    description: Rx FIFO 1 full interrupt line
+    bit_offset: 6
+    bit_size: 1
+  - name: RF1LL
+    description: Rx FIFO 1 message lost interrupt line
+    bit_offset: 7
+    bit_size: 1
+  - name: HPML
+    description: High priority message interrupt line
+    bit_offset: 8
+    bit_size: 1
+  - name: TCL
+    description: Transmission completed interrupt line
+    bit_offset: 9
+    bit_size: 1
+  - name: TCFL
+    description: Transmission cancellation finished interrupt line
+    bit_offset: 10
+    bit_size: 1
+  - name: TFEL
+    description: Tx FIFO empty interrupt line
+    bit_offset: 11
+    bit_size: 1
+  - name: TEFNL
+    description: Tx event FIFO new entry interrupt line
+    bit_offset: 12
+    bit_size: 1
+  - name: TEFWL
+    description: Tx event FIFO watermark reached interrupt line
+    bit_offset: 13
+    bit_size: 1
+  - name: TEFFL
+    description: Tx event FIFO full interrupt line
+    bit_offset: 14
+    bit_size: 1
+  - name: TEFLL
+    description: Tx event FIFO element Lost interrupt line
+    bit_offset: 15
+    bit_size: 1
+  - name: TSWL
+    description: Timestamp wraparound interrupt line
+    bit_offset: 16
+    bit_size: 1
+  - name: MRAFL
+    description: Message RAM access failure interrupt line
+    bit_offset: 17
+    bit_size: 1
+  - name: TOOL
+    description: Timeout occurred interrupt line
+    bit_offset: 18
+    bit_size: 1
+  - name: DRXL
+    description: Message stored to dedicated Rx buffer interrupt line
+    bit_offset: 19
+    bit_size: 1
+  - name: ELOL
+    description: Error logging overflow interrupt line
+    bit_offset: 22
+    bit_size: 1
+  - name: EPL
+    description: Error passive interrupt line
+    bit_offset: 23
+    bit_size: 1
+  - name: EWL
+    description: Warning status interrupt line
+    bit_offset: 24
+    bit_size: 1
+  - name: BOL
+    description: Bus_Off status
+    bit_offset: 25
+    bit_size: 1
+  - name: WDIL
+    description: Watchdog interrupt line
+    bit_offset: 26
+    bit_size: 1
+  - name: PEAL
+    description: Protocol error in arbitration phase line
+    bit_offset: 27
+    bit_size: 1
+  - name: PEDL
+    description: Protocol error in data phase line
+    bit_offset: 28
+    bit_size: 1
+  - name: ARAL
+    description: Access to reserved address line
+    bit_offset: 29
+    bit_size: 1
+fieldset/IR:
+  description: FDCAN interrupt register
+  fields:
+  - name: RFN
+    description: Rx FIFO X new message
+    bit_offset: 0
+    bit_size: 1
+    array:
+      offsets:
+      - 0
+      - 4
+  - name: RFW
+    description: Rx FIFO X watermark reached
+    bit_offset: 1
+    bit_size: 1
+    array:
+      offsets:
+      - 0
+      - 4
+  - name: RFF
+    description: Rx FIFO X full
+    bit_offset: 2
+    bit_size: 1
+    array:
+      offsets:
+      - 0
+      - 4
+  - name: RFL
+    description: Rx FIFO X message lost
+    bit_offset: 3
+    bit_size: 1
+    array:
+      offsets:
+      - 0
+      - 4
+  - name: HPM
+    description: High-priority message
+    bit_offset: 8
+    bit_size: 1
+  - name: TC
+    description: Transmission completed
+    bit_offset: 9
+    bit_size: 1
+  - name: TCF
+    description: Transmission cancellation finished
+    bit_offset: 10
+    bit_size: 1
+  - name: TFE
+    description: Tx FIFO empty
+    bit_offset: 11
+    bit_size: 1
+  - name: TEFN
+    description: Tx event FIFO New Entry
+    bit_offset: 12
+    bit_size: 1
+  - name: TEFW
+    description: Tx event FIFO watermark reached
+    bit_offset: 13
+    bit_size: 1
+  - name: TEFF
+    description: Tx event FIFO full
+    bit_offset: 14
+    bit_size: 1
+  - name: TEFL
+    description: Tx event FIFO element lost
+    bit_offset: 15
+    bit_size: 1
+  - name: TSW
+    description: Timestamp wraparound
+    bit_offset: 16
+    bit_size: 1
+  - name: MRAF
+    description: 'Message RAM access failure. The flag is set when the Rx handler:  has not completed acceptance filtering or storage of an accepted message until the arbitration field of the following message has been received. In this case acceptance filtering or message storage is aborted and the Rx handler starts processing of the following message.  was unable to write a message to the message RAM. In this case message storage is aborted.  In both cases the FIFO put index is not updated. The partly stored message is overwritten when the next message is stored to this location.  The flag is also set when the Tx Handler was not able to read a message from the Message RAM in time. In this case message transmission is aborted. In case of a Tx Handler access failure the FDCAN is switched into Restricted operation Mode (see mode). To leave Restricted operation Mode, the Host CPU has to reset CCCR.ASM.'
+    bit_offset: 17
+    bit_size: 1
+  - name: TOO
+    description: Timeout occurred
+    bit_offset: 18
+    bit_size: 1
+  - name: DRX
+    description: Message stored to dedicated Rx buffer
+    bit_offset: 19
+    bit_size: 1
+  - name: ELO
+    description: Error logging overflow
+    bit_offset: 22
+    bit_size: 1
+  - name: EP
+    description: Error passive
+    bit_offset: 23
+    bit_size: 1
+  - name: EW
+    description: Warning status
+    bit_offset: 24
+    bit_size: 1
+  - name: BO
+    description: Bus_Off status
+    bit_offset: 25
+    bit_size: 1
+  - name: WDI
+    description: Watchdog interrupt
+    bit_offset: 26
+    bit_size: 1
+  - name: PEA
+    description: Protocol error in arbitration phase (nominal bit time is used)
+    bit_offset: 27
+    bit_size: 1
+  - name: PED
+    description: Protocol error in data phase (data bit time is used)
+    bit_offset: 28
+    bit_size: 1
+  - name: ARA
+    description: Access to reserved address
+    bit_offset: 29
+    bit_size: 1
+fieldset/NBTP:
+  description: FDCAN nominal bit timing and prescaler register
+  fields:
+  - name: NTSEG2
+    description: Nominal time segment after sample point. Valid values are 0 to 127. The actual interpretation by the hardware of this value is such that one more than the programmed value is used
+    bit_offset: 0
+    bit_size: 7
+  - name: NTSEG1
+    description: Nominal time segment before sample point. Valid values are 0 to 255. The actual interpretation by the hardware of this value is such that one more than the programmed value is used.  These are protected write (P) bits, write access is possible only when the bit 1 [CCE] and bit 0 [INIT] of CCCR register are set to 1
+    bit_offset: 8
+    bit_size: 8
+  - name: NBRP
+    description: Bit rate prescaler. Value by which the oscillator frequency is divided for generating the bit time quanta. The bit time is built up from a multiple of this quanta. Valid values are 0 to 511. The actual interpretation by the hardware of this value is such that one more than the value programmed here is used.  These are protected write (P) bits, write access is possible only when the bit 1 [CCE] and bit 0 [INIT] of CCCR register are set to 1
+    bit_offset: 16
+    bit_size: 9
+  - name: NSJW
+    description: Nominal (re)synchronization jump width. Valid values are 0 to 127. The actual interpretation by the hardware of this value is such that the used value is the one programmed incremented by one.  These are protected write (P) bits, write access is possible only when the bit 1 [CCE] and bit 0 [INIT] of CCCR register are set to 1
+    bit_offset: 25
+    bit_size: 7
+fieldset/PSR:
+  description: FDCAN protocol status register
+  fields:
+  - name: LEC
+    description: 'Last error code. The LEC indicates the type of the last error to occur on the CAN bus. This field is cleared to 0 when a message has been transferred (reception or transmission) without error.  Access type is RS: set on read.'
+    bit_offset: 0
+    bit_size: 3
+    enum: LEC
+  - name: ACT
+    description: Activity. Monitors the module’s CAN communication state
+    bit_offset: 3
+    bit_size: 2
+    enum: ACT
+  - name: EP
+    description: Error passive
+    bit_offset: 5
+    bit_size: 1
+  - name: EW
+    description: Warning Sstatus
+    bit_offset: 6
+    bit_size: 1
+  - name: BO
+    description: Bus_Off status
+    bit_offset: 7
+    bit_size: 1
+  - name: DLEC
+    description: 'Data last error code. Type of last error that occurred in the data phase of a FDCAN format frame with its BRS flag set. Coding is the same as for LEC. This field is cleared to 0 when a FDCAN format frame with its BRS flag set has been transferred (reception or transmission) without error.  Access type is RS: set on read.'
+    bit_offset: 8
+    bit_size: 3
+  - name: RESI
+    description: 'ESI flag of last received FDCAN message. This bit is set together with REDL, independent of acceptance filtering.  Access type is RX: reset on read.'
+    bit_offset: 11
+    bit_size: 1
+  - name: RBRS
+    description: 'BRS flag of last received FDCAN message. This bit is set together with REDL, independent of acceptance filtering.  Access type is RX: reset on read.'
+    bit_offset: 12
+    bit_size: 1
+  - name: REDL
+    description: 'Received FDCAN message. This bit is set independent of acceptance filtering.  Access type is RX: reset on read.'
+    bit_offset: 13
+    bit_size: 1
+  - name: PXE
+    description: Protocol exception event
+    bit_offset: 14
+    bit_size: 1
+  - name: TDCV
+    description: Transmitter delay compensation value. Position of the secondary sample point, defined by the sum of the measured delay from FDCAN_TX to FDCAN_RX and TDCR.TDCO. The SSP position is, in the data phase, the number of minimum time quanta (mtq) between the start of the transmitted bit and the secondary sample point. Valid values are 0 to 127 mtq
+    bit_offset: 16
+    bit_size: 7
+fieldset/RWD:
+  description: FDCAN RAM watchdog register
+  fields:
+  - name: WDC
+    description: Watchdog configuration. Start value of the message RAM watchdog counter. With the reset value of 00, the counter is disabled.  These are protected write (P) bits, write access is possible only when the bit 1 [CCE] and bit 0 [INIT] of FDCAN_CCCR register are set to 1
+    bit_offset: 0
+    bit_size: 8
+  - name: WDV
+    description: Watchdog value. Actual message RAM watchdog counter value
+    bit_offset: 8
+    bit_size: 8
+fieldset/RXBC:
+  description: FDCAN Rx buffer configuration register
+  fields:
+  - name: RBSA
+    description: Rx buffer start address
+    bit_offset: 2
+    bit_size: 14
+fieldset/RXESC:
+  description: FDCAN Rx buffer element size configuration register
+  fields:
+  - name: F0DS
+    description: Rx FIFO 1 data field size
+    bit_offset: 0
+    bit_size: 3
+    enum: F0DS
+  - name: F1DS
+    description: Rx FIFO 0 data field size
+    bit_offset: 4
+    bit_size: 3
+    enum: F1DS
+  - name: RBDS
+    description: Rx buffer data field size
+    bit_offset: 8
+    bit_size: 3
+    enum: RBDS
+fieldset/RXFA:
+  description: CAN Rx FIFO X acknowledge register
+  fields:
+  - name: FAI
+    description: Rx FIFO X acknowledge index. After the Host has read a message or a sequence of messages from Rx FIFO X it has to write the buffer index of the last element read from Rx FIFO X to FAI. This sets the Rx FIFO X get index RXFS[FGI] to FAI + 1 and update the FIFO X fill level RXFS[FFL]
+    bit_offset: 0
+    bit_size: 6
+fieldset/RXFC:
+  description: FDCAN Rx FIFO X configuration register
+  fields:
+  - name: FSA
+    description: Rx FIFO X start address
+    bit_offset: 2
+    bit_size: 14
+  - name: FS
+    description: Rx FIFO X size
+    bit_offset: 16
+    bit_size: 7
+    enum: FS
+  - name: FWM
+    description: FIFO X watermark
+    bit_offset: 24
+    bit_size: 7
+    enum: FWM
+  - name: FM
+    description: FIFO X operation mode
+    bit_offset: 31
+    bit_size: 1
+fieldset/RXFS:
+  description: FDCAN Rx FIFO X status register
+  fields:
+  - name: FFL
+    description: Rx FIFO X fill level. Number of elements stored in Rx FIFO X, range 0 to 3
+    bit_offset: 0
+    bit_size: 7
+  - name: FGI
+    description: Rx FIFO X get index. Rx FIFO X read index pointer, range 0 to 2
+    bit_offset: 8
+    bit_size: 6
+  - name: FPI
+    description: Rx FIFO X put index. Rx FIFO X write index pointer, range 0 to 2
+    bit_offset: 16
+    bit_size: 6
+  - name: FF
+    description: Rx FIFO X full
+    bit_offset: 24
+    bit_size: 1
+  - name: RFL
+    description: Rx FIFO X message lost. This bit is a copy of interrupt flag IR[RFL]. When IR[RFL] is reset, this bit is also reset
+    bit_offset: 25
+    bit_size: 1
+  - name: DMS
+    description: Debug message status
+    bit_offset: 30
+    bit_size: 2
+    enum: DMS
+fieldset/SIDFC:
+  description: FDCAN standard ID filter configuration register
+  fields:
+    - name: FLSSA
+      description: Filter list standard start address
+      bit_offset: 2
+      bit_size: 14
+    - name: LSS
+      description: List size standard
+      bit_offset: 16
+      bit_size: 8
+      enum: LSS
+fieldset/TDCR:
+  description: FDCAN transmitter delay compensation register
+  fields:
+  - name: TDCF
+    description: Transmitter delay compensation filter window length. Defines the minimum value for the SSP position, dominant edges on FDCAN_RX that would result in an earlier SSP position are ignored for transmitter delay measurements.  These are protected write (P) bits, which means that write access by the bits is possible only when the bit 1 [CCE] and bit 0 [INIT] of CCCR register are set to 1
+    bit_offset: 0
+    bit_size: 7
+  - name: TDCO
+    description: Transmitter delay compensation offset. Offset value defining the distance between the measured delay from FDCAN_TX to FDCAN_RX and the secondary sample point. Valid values are 0 to 127 mtq.  These are protected write (P) bits, which means that write access by the bits is possible only when the bit 1 [CCE] and bit 0 [INIT] of CCCR register are set to 1
+    bit_offset: 8
+    bit_size: 7
+fieldset/TEST:
+  description: FDCAN test register
+  fields:
+  - name: LBCK
+    description: Loop back mode
+    bit_offset: 4
+    bit_size: 1
+  - name: TX
+    description: Control of transmit pin
+    bit_offset: 5
+    bit_size: 2
+    enum: TX
+  - name: RX
+    description: Receive pin. Monitors the actual value of pin FDCANx_RX
+    bit_offset: 7
+    bit_size: 1
+fieldset/TOCC:
+  description: FDCAN timeout counter configuration register
+  fields:
+  - name: ETOC
+    description: Timeout counter enable. This is a protected write (P) bit, write access is possible only when the bit 1 [CCE] and bit 0 [INIT] of CCCR register are set to 1
+    bit_offset: 0
+    bit_size: 1
+  - name: TOS
+    description: Timeout select. When operating in Continuous mode, a write to TOCV presets the counter to the value configured by TOCC[TOP] and continues down-counting. When the timeout counter is controlled by one of the FIFOs, an empty FIFO presets the counter to the value configured by TOCC[TOP]. Down-counting is started when the first FIFO element is stored.  These are protected write (P) bits, write access is possible only when the bit 1 [CCE] and bit 0 [INIT] of CCCR register are set to 1
+    bit_offset: 1
+    bit_size: 2
+    enum: TOS
+  - name: TOP
+    description: Timeout period. Start value of the timeout counter (down-counter). Configures the timeout period
+    bit_offset: 16
+    bit_size: 16
+fieldset/TOCV:
+  description: FDCAN timeout counter value register
+  fields:
+  - name: TOC
+    description: Timeout counter. The timeout counter is decremented in multiples of CAN bit times [1 … 16] depending on the configuration of TSCC.TCP. When decremented to 0, interrupt flag IR.TOO is set and the timeout counter is stopped. Start and reset/restart conditions are configured via TOCC.TOS
+    bit_offset: 0
+    bit_size: 16
+fieldset/TSCC:
+  description: FDCAN timestamp counter configuration register
+  fields:
+  - name: TSS
+    description: Timestamp select. These are protected write (P) bits, write access is possible only when the bit 1 [CCE] and bit 0 [INIT] of CCCR register are set to 1
+    bit_offset: 0
+    bit_size: 2
+    enum: TSS
+  - name: TCP
+    description: Timestamp counter prescaler. Configures the timestamp and timeout counters time unit in multiples of CAN bit times  [1 … 16].  The actual interpretation by the hardware of this value is such that one more than the value programmed here is used.  In CAN FD mode the internal timestamp counter TCP does not provide a constant time base due to the different CAN bit times between arbitration phase and data phase. Thus CAN FD requires an external counter for timestamp generation (TSS = 10).  These are protected write (P) bits, write access is possible only when the bit 1 [CCE] and bit 0 [INIT] of CCCR register are set to 1
+    bit_offset: 16
+    bit_size: 4
+fieldset/TSCV:
+  description: FDCAN timestamp counter value register
+  fields:
+  - name: TSC
+    description: Timestamp counter. The internal/external timestamp counter value is captured on start of frame (both Rx and Tx). When TSCC[TSS] = 01, the timestamp counter is incremented in multiples of CAN bit times [1 … 16] depending on the configuration of TSCC[TCP]. A wrap around sets interrupt flag IR[TSW]. Write access resets the counter to 0.  When TSCC.TSS = 10, TSC reflects the external timestamp counter value. A write access has no impact
+    bit_offset: 0
+    bit_size: 16
+fieldset/TTCPT:
+  description: FDCAN TT capture time register
+  fields:
+    - name: CCV
+      description: Cycle count value
+      bit_offset: 0
+      bit_size: 6
+    - name: SWV
+      description: Stop watch value
+      bit_offset: 16
+      bit_size: 16
+fieldset/TTCSM:
+  description: FDCAN TT cycle sync mark register
+  fields:
+    - name: CSM
+      description: Cycle sync mark
+      bit_offset: 0
+      bit_size: 16
+fieldset/TTCTC:
+  description: FDCAN TT cycle time and count register
+  fields:
+    - name: CT
+      description: Cycle time
+      bit_offset: 0
+      bit_size: 16
+    - name: CC
+      description: Cycle count
+      bit_offset: 16
+      bit_size: 6
+fieldset/TTGTP:
+  description: FDCAN TT global time preset register
+  fields:
+    - name: TP
+      description: Time preset
+      bit_offset: 0
+      bit_size: 16
+    - name: CTP
+      description: Cycle time target phase
+      bit_offset: 16
+      bit_size: 16
+fieldset/TTIE:
+  description: FDCAN TT interrupt enable register
+  fields:
+    - name: SBCE
+      description: Start of basic cycle interrupt enable
+      bit_offset: 0
+      bit_size: 1
+    - name: SMCE
+      description: Start of matrix cycle interrupt enable
+      bit_offset: 1
+      bit_size: 1
+    - name: CSME
+      description: Change of synchronization mode interrupt enable
+      bit_offset: 2
+      bit_size: 1
+    - name: SOGE
+      description: Start of gap interrupt enable
+      bit_offset: 3
+      bit_size: 1
+    - name: RTMIE
+      description: Register time mark interrupt enable
+      bit_offset: 4
+      bit_size: 1
+    - name: TTMIE
+      description: Trigger time mark event internal interrupt enable
+      bit_offset: 5
+      bit_size: 1
+    - name: SWEE
+      description: Stop watch event interrupt enable
+      bit_offset: 6
+      bit_size: 1
+    - name: GTWE
+      description: Global time wrap interrupt enable
+      bit_offset: 7
+      bit_size: 1
+    - name: GTDE
+      description: Global time discontinuity interrupt enable
+      bit_offset: 8
+      bit_size: 1
+    - name: GTEE
+      description: Global time error interrupt enable
+      bit_offset: 9
+      bit_size: 1
+    - name: TXUE
+      description: Tx count underflow interrupt enable
+      bit_offset: 10
+      bit_size: 1
+    - name: TXOE
+      description: Tx count overflow interrupt enable
+      bit_offset: 11
+      bit_size: 1
+    - name: SE1E
+      description: Scheduling error 1 interrupt enable
+      bit_offset: 12
+      bit_size: 1
+    - name: SE2E
+      description: Scheduling error 2 interrupt enable
+      bit_offset: 13
+      bit_size: 1
+    - name: ELCE
+      description: Change error level interrupt enable
+      bit_offset: 14
+      bit_size: 1
+    - name: IWTE
+      description: Initialization watch trigger interrupt enable
+      bit_offset: 15
+      bit_size: 1
+    - name: WTE
+      description: Watch trigger interrupt enable
+      bit_offset: 16
+      bit_size: 1
+    - name: AWE
+      description: Application watchdog interrupt enable
+      bit_offset: 17
+      bit_size: 1
+    - name: CERE
+      description: Configuration error interrupt enable
+      bit_offset: 18
+      bit_size: 1
+fieldset/TTILS:
+  description: FDCAN TT interrupt line select register
+  fields:
+    - name: SBCL
+      description: Start of basic cycle interrupt line
+      bit_offset: 0
+      bit_size: 1
+    - name: SMCL
+      description: Start of matrix cycle interrupt line
+      bit_offset: 1
+      bit_size: 1
+    - name: CSML
+      description: Change of synchronization mode interrupt line
+      bit_offset: 2
+      bit_size: 1
+    - name: SOGL
+      description: Start of gap interrupt line
+      bit_offset: 3
+      bit_size: 1
+    - name: RTMIL
+      description: Register time mark interrupt line
+      bit_offset: 4
+      bit_size: 1
+    - name: TTMIL
+      description: Trigger time mark event internal interrupt line
+      bit_offset: 5
+      bit_size: 1
+    - name: SWEL
+      description: Stop watch event interrupt line
+      bit_offset: 6
+      bit_size: 1
+    - name: GTWL
+      description: Global time wrap interrupt line
+      bit_offset: 7
+      bit_size: 1
+    - name: GTDL
+      description: Global time discontinuity interrupt line
+      bit_offset: 8
+      bit_size: 1
+    - name: GTEL
+      description: Global time error interrupt line
+      bit_offset: 9
+      bit_size: 1
+    - name: TXUL
+      description: Tx count underflow interrupt line
+      bit_offset: 10
+      bit_size: 1
+    - name: TXOL
+      description: Tx count overflow interrupt line
+      bit_offset: 11
+      bit_size: 1
+    - name: SE1L
+      description: Scheduling error 1 interrupt line
+      bit_offset: 12
+      bit_size: 1
+    - name: SE2L
+      description: Scheduling error 2 interrupt line
+      bit_offset: 13
+      bit_size: 1
+    - name: ELCL
+      description: Change error level interrupt line
+      bit_offset: 14
+      bit_size: 1
+    - name: IWTL
+      description: Initialization watch trigger interrupt line
+      bit_offset: 15
+      bit_size: 1
+    - name: WTL
+      description: Watch trigger interrupt line
+      bit_offset: 16
+      bit_size: 1
+    - name: AWL
+      description: Application watchdog interrupt line
+      bit_offset: 17
+      bit_size: 1
+    - name: CERL
+      description: Configuration error interrupt line
+      bit_offset: 18
+      bit_size: 1
+fieldset/TTIR:
+  description: FDCAN TT interrupt register
+  fields:
+    - name: SBC
+      description: Start of basic cycle
+      bit_offset: 0
+      bit_size: 1
+    - name: SMC
+      description: Start of matrix cycle
+      bit_offset: 1
+      bit_size: 1
+    - name: CSM
+      description: Change of synchronization mode
+      bit_offset: 2
+      bit_size: 1
+    - name: SOG
+      description: Start of gap
+      bit_offset: 3
+      bit_size: 1
+    - name: RTMI
+      description: Register time mark interrupt
+      bit_offset: 4
+      bit_size: 1
+    - name: TTMI
+      description: Trigger time mark event internal
+      bit_offset: 5
+      bit_size: 1
+    - name: SWE
+      description: Stop watch event
+      bit_offset: 6
+      bit_size: 1
+    - name: GTW
+      description: Global time wrap
+      bit_offset: 7
+      bit_size: 1
+    - name: GTD
+      description: Global time discontinuity
+      bit_offset: 8
+      bit_size: 1
+    - name: GTE
+      description: Global time error
+      bit_offset: 9
+      bit_size: 1
+    - name: TXU
+      description: Tx count underflow
+      bit_offset: 10
+      bit_size: 1
+    - name: TXO
+      description: Tx count overflow
+      bit_offset: 11
+      bit_size: 1
+    - name: SE1
+      description: Scheduling error 1
+      bit_offset: 12
+      bit_size: 1
+    - name: SE2
+      description: Scheduling error 2
+      bit_offset: 13
+      bit_size: 1
+    - name: ELC
+      description: Error level changed
+      bit_offset: 14
+      bit_size: 1
+    - name: IWTG
+      description: Initialization watch trigger
+      bit_offset: 15
+      bit_size: 1
+    - name: WT
+      description: Watch trigger
+      bit_offset: 16
+      bit_size: 1
+    - name: AW
+      description: Application watchdog
+      bit_offset: 17
+      bit_size: 1
+    - name: CER
+      description: Configuration error
+      bit_offset: 18
+      bit_size: 1
+fieldset/TTLGT:
+  description: FDCAN TT local and global time register
+  fields:
+    - name: LT
+      description: Local time
+      bit_offset: 0
+      bit_size: 16
+    - name: GT
+      description: Global time
+      bit_offset: 16
+      bit_size: 16
+fieldset/TTMLM:
+  description: FDCAN TT matrix limits register
+  fields:
+    - name: CCM
+      description: Cycle count Max
+      bit_offset: 0
+      bit_size: 6
+      enum: CCM
+    - name: CSS
+      description: Cycle start synchronization
+      bit_offset: 6
+      bit_size: 2
+      enum: CSS
+    - name: TXEW
+      description: Tx enable window
+      bit_offset: 8
+      bit_size: 4
+    - name: ENTT
+      description: Expected number of Tx triggers
+      bit_offset: 16
+      bit_size: 12
+fieldset/TTOCF:
+  description: FDCAN TT operation configuration register
+  fields:
+    - name: OM
+      description: Operation mode
+      bit_offset: 0
+      bit_size: 2
+      enum: OM
+    - name: GEN
+      description: Gap enable
+      bit_offset: 3
+      bit_size: 1
+    - name: TM
+      description: Time master
+      bit_offset: 4
+      bit_size: 1
+    - name: LDSDL
+      description: LD of synchronization deviation limit
+      bit_offset: 5
+      bit_size: 3
+    - name: IRTO
+      description: Initial reference trigger offset
+      bit_offset: 8
+      bit_size: 7
+    - name: EECS
+      description: Enable external clock synchronization
+      bit_offset: 15
+      bit_size: 1
+    - name: AWL
+      description: Application watchdog limit
+      bit_offset: 16
+      bit_size: 8
+    - name: EGTF
+      description: Enable global time filtering
+      bit_offset: 24
+      bit_size: 1
+    - name: ECC
+      description: Enable clock calibration
+      bit_offset: 25
+      bit_size: 1
+    - name: EVTP
+      description: Event trigger polarity
+      bit_offset: 26
+      bit_size: 1
+fieldset/TTOCN:
+  description: FDCAN TT operation control register
+  fields:
+    - name: SGT
+      description: Set global time
+      bit_offset: 0
+      bit_size: 1
+    - name: ECS
+      description: External clock synchronization
+      bit_offset: 1
+      bit_size: 1
+    - name: SWP
+      description: Stop watch polarity
+      bit_offset: 2
+      bit_size: 1
+    - name: SWS
+      description: Stop watch source
+      bit_offset: 3
+      bit_size: 2
+      enum: SWS
+    - name: RTIE
+      description: Register time mark interrupt pulse enable
+      bit_offset: 5
+      bit_size: 1
+    - name: TMC
+      description: Register time mark compare
+      bit_offset: 6
+      bit_size: 2
+      enum: TMC
+    - name: TTIE
+      description: Trigger time mark interrupt pulse enable
+      bit_offset: 8
+      bit_size: 1
+    - name: GCS
+      description: Gap control select
+      bit_offset: 9
+      bit_size: 1
+    - name: FGP
+      description: Finish gap
+      bit_offset: 10
+      bit_size: 1
+    - name: TMG
+      description: Time mark gap
+      bit_offset: 11
+      bit_size: 1
+    - name: NIG
+      description: Next is gap
+      bit_offset: 12
+      bit_size: 1
+    - name: ESCN
+      description: External synchronization control
+      bit_offset: 13
+      bit_size: 1
+    - name: LCKC
+      description: TT operation control register locked
+      bit_offset: 15
+      bit_size: 1
+fieldset/TTOST:
+  description: FDCAN TT operation status register
+  fields:
+    - name: EL
+      description: Error level
+      bit_offset: 0
+      bit_size: 2
+      enum: EL
+    - name: MS
+      description: Master state
+      bit_offset: 2
+      bit_size: 2
+      enum: MS
+    - name: SYS
+      description: Synchronization state
+      bit_offset: 4
+      bit_size: 2
+      enum: SYS
+    - name: QGTP
+      description: Quality of global time phase
+      bit_offset: 6
+      bit_size: 1
+    - name: QCS
+      description: Quality of clock speed
+      bit_offset: 7
+      bit_size: 1
+    - name: RTO
+      description: Reference trigger offset
+      bit_offset: 8
+      bit_size: 8
+    - name: WGTD
+      description: Wait for global time discontinuity
+      bit_offset: 22
+      bit_size: 1
+    - name: GFI
+      description: Gap finished indicator
+      bit_offset: 23
+      bit_size: 1
+    - name: TMP
+      description: Time master priority
+      bit_offset: 24
+      bit_size: 3
+    - name: GSI
+      description: Gap started indicator
+      bit_offset: 27
+      bit_size: 1
+    - name: WFE
+      description: Wait for event
+      bit_offset: 28
+      bit_size: 1
+    - name: AWE
+      description: Application watchdog event
+      bit_offset: 29
+      bit_size: 1
+    - name: WECS
+      description: Wait for external clock synchronization
+      bit_offset: 30
+      bit_size: 1
+    - name: SPL
+      description: Schedule phase lock
+      bit_offset: 31
+      bit_size: 1
+fieldset/TTRMC:
+  description: FDCAN TT reference message configuration register
+  fields:
+    - name: RID
+      description: Reference identifier
+      bit_offset: 0
+      bit_size: 29
+    - name: XTD
+      description: Extended identifier
+      bit_offset: 30
+      bit_size: 1
+    - name: RMPS
+      description: Reference message payload select
+      bit_offset: 31
+      bit_size: 1
+fieldset/TTTMC:
+  description: FDCAN TT trigger memory configuration register
+  fields:
+    - name: TMSA
+      description: Trigger memory start address
+      bit_offset: 2
+      bit_size: 14
+    - name: TME
+      description: Trigger memory elements
+      bit_offset: 16
+      bit_size: 7
+      enum: TME
+fieldset/TTTMK:
+  description: FDCAN TT time mark register
+  fields:
+    - name: TM
+      description: Time mark
+      bit_offset: 0
+      bit_size: 16
+    - name: TICC
+      description: Time mark cycle code
+      bit_offset: 16
+      bit_size: 7
+    - name: LCKM
+      description: TT time mark register locked
+      bit_offset: 31
+      bit_size: 1
+fieldset/TTTS:
+  description: FDCAN TT trigger select register
+  fields:
+    - name: SWTDEL
+      description: Stop watch trigger input selection
+      bit_offset: 0
+      bit_size: 2
+      enum: SWTDEL
+    - name: EVTSEL
+      description: Event trigger input selection
+      bit_offset: 4
+      bit_size: 2
+      enum: EVTSEL
+fieldset/TURCF:
+  description: FDCAN TUR configuration register
+  fields:
+    - name: NCL
+      description: Numerator configuration low
+      bit_offset: 0
+      bit_size: 16
+    - name: DC
+      description: Denominator configuration
+      bit_offset: 16
+      bit_size: 14
+      enum: DC
+    - name: ELT
+      description: Enable local time
+      bit_offset: 31
+      bit_size: 1
+fieldset/TURNA:
+  description: FDCAN TUR numerator actual register
+  fields:
+    - name: NAV
+      description: Numerator actual value
+      bit_offset: 0
+      bit_size: 18
+      enum: NAV
+fieldset/TXBAR:
+  description: FDCAN Tx buffer add request register
+  fields:
+  - name: AR
+    description: Add request. Each Tx buffer has its own add request bit. Writing a 1 sets the corresponding add request bit; writing a 0 has no impact. This enables the Host to set transmission requests for multiple Tx buffers with one write to TXBAR. When no Tx scan is running, the bits are reset immediately, else the bits remain set until the Tx scan process has completed
+    bit_offset: 0
+    bit_size: 1
+    array:
+      len: 32
+      stride: 1
+fieldset/TXBC:
+  description: FDCAN Tx buffer configuration register
+  fields:
+    - name: TBSA
+      description: Tx buffers start address
+      bit_offset: 2
+      bit_size: 14
+    - name: NDTB
+      description: Number of dedicated transmit buffers
+      bit_offset: 16
+      bit_size: 6
+      enum: NDTB
+    - name: TFQS
+      description: Transmit FIFO/queue size
+      bit_offset: 24
+      bit_size: 6
+      enum: TFQS
+    - name: TFQM
+      description: Tx FIFO/queue mode. This is a protected write (P) bit, which means that write access by the bits is possible only when the bit 1 [CCE] and bit 0 [INIT] of CCCR register are set to 1
+      bit_offset: 30
+      bit_size: 1
+      enum: TFQM
+fieldset/TXBCF:
+  description: FDCAN Tx buffer cancellation finished register
+  fields:
+  - name: CF
+    description: Cancellation finished. Each Tx buffer has its own CF bit. The bits are set when the corresponding TXBRP bit is cleared after a cancellation was requested via TXBCR. In case the corresponding TXBRP bit was not set at the point of cancellation, CF is set immediately. The bits are reset when a new transmission is requested by writing a 1 to the corresponding bit of register TXBAR
+    bit_offset: 0
+    bit_size: 1
+    array:
+      len: 32
+      stride: 1
+fieldset/TXBCIE:
+  description: FDCAN Tx buffer cancellation finished interrupt enable register
+  fields:
+  - name: CFIE
+    description: Cancellation finished interrupt enable.. Each Tx buffer has its own CFIE bit
+    bit_offset: 0
+    bit_size: 1
+    array:
+      len: 32
+      stride: 1
+fieldset/TXBCR:
+  description: FDCAN Tx buffer cancellation request register
+  fields:
+  - name: CR
+    description: Cancellation request. Each Tx buffer has its own cancellation request bit. Writing a 1 sets the corresponding CR bit; writing a 0 has no impact.  This enables the Host to set cancellation requests for multiple Tx buffers with one write to TXBCR. The bits remain set until the corresponding TXBRP bit is reset
+    bit_offset: 0
+    bit_size: 1
+    array:
+      len: 32
+      stride: 1
+fieldset/TXBRP:
+  description: FDCAN Tx buffer request pending register
+  fields:
+  - name: TRP
+    description: Transmission request pending. Each Tx buffer has its own transmission request pending bit. The bits are set via register TXBAR. The bits are reset after a requested transmission has completed or has been canceled via register TXBCR.  After a TXBRP bit has been set, a Tx scan is started to check for the pending Tx request with the highest priority (Tx buffer with lowest Message ID).  A cancellation request resets the corresponding transmission request pending bit of register TXBRP. In case a transmission has already been started when a cancellation is requested, this is done at the end of the transmission, regardless whether the transmission was successful or not. The cancellation request bits are reset directly after the corresponding TXBRP bit has been reset.  After a cancellation has been requested, a finished cancellation is signaled via TXBCF  after successful transmission together with the corresponding TXBTO bit  when the transmission has not yet been started at the point of cancellation  when the transmission has been aborted due to lost arbitration  when an error occurred during frame transmission  In DAR mode all transmissions are automatically canceled if they are not successful. The corresponding TXBCF bit is set for all unsuccessful transmissions
+    bit_offset: 0
+    bit_size: 1
+    array:
+      len: 32
+      stride: 1
+fieldset/TXBTIE:
+  description: FDCAN Tx buffer transmission interrupt enable register
+  fields:
+  - name: TIE
+    description: Transmission interrupt enable. Each Tx buffer has its own TIE bit
+    bit_offset: 0
+    bit_size: 1
+    array:
+      len: 32
+      stride: 1
+fieldset/TXBTO:
+  description: FDCAN Tx buffer transmission occurred register
+  fields:
+  - name: TO
+    description: Transmission occurred.. Each Tx buffer has its own TO bit. The bits are set when the corresponding TXBRP bit is cleared after a successful transmission. The bits are reset when a new transmission is requested by writing a 1 to the corresponding bit of register TXBAR
+    bit_offset: 0
+    bit_size: 1
+    array:
+      len: 32
+      stride: 1
+fieldset/TXEFA:
+  description: FDCAN Tx event FIFO acknowledge register
+  fields:
+  - name: EFAI
+    description: Event FIFO acknowledge index. After the Host has read an element or a sequence of elements from the Tx event FIFO, it has to write the index of the last element read from Tx event FIFO to EFAI. This sets the Tx event FIFO get index TXEFS[EFGI] to EFAI + 1 and updates the FIFO 0 fill level TXEFS[EFFL]
+    bit_offset: 0
+    bit_size: 5
+fieldset/TXEFC:
+  description: FDCAN Tx event FIFO configuration register
+  fields:
+  - name: EFSA
+    description: Event FIFO start address
+    bit_offset: 2
+    bit_size: 14
+  - name: EFS
+    description: Event FIFO size
+    bit_offset: 16
+    bit_size: 6
+    enum: EFS
+  - name: EFWM
+    description: Event FIFO watermark
+    bit_offset: 24
+    bit_size: 6
+    enum: EFWM
+fieldset/TXEFS:
+  description: FDCAN Tx event FIFO status register
+  fields:
+  - name: EFFL
+    description: Event FIFO fill level. Number of elements stored in Tx event FIFO, range 0 to 3
+    bit_offset: 0
+    bit_size: 6
+  - name: EFGI
+    description: Event FIFO get index. Tx event FIFO read index pointer, range 0 to 3
+    bit_offset: 8
+    bit_size: 5
+  - name: EFPI
+    description: Event FIFO put index. Tx event FIFO write index pointer, range 0 to 3
+    bit_offset: 16
+    bit_size: 5
+  - name: EFF
+    description: Event FIFO full
+    bit_offset: 24
+    bit_size: 1
+  - name: TEFL
+    description: Tx event FIFO element lost. This bit is a copy of interrupt flag IR[TEFL]. When IR[TEFL] is reset, this bit is also reset.  0 No Tx event FIFO element lost  1 Tx event FIFO element lost, also set after write attempt to Tx event FIFO of size 0
+    bit_offset: 25
+    bit_size: 1
+fieldset/TXESC:
+  description: FDCAN Tx buffer element size configuration register
+  fields:
+    - name: TBDS
+      description: Tx buffer data Field size
+      bit_offset: 0
+      bit_size: 3
+      enum: TBDS
+fieldset/TXFQS:
+  description: FDCAN Tx FIFO/queue status register
+  fields:
+  - name: TFFL
+    description: Tx FIFO free level. Number of consecutive free Tx FIFO elements starting from TFGI, range 0 to 3. Read as 0 when Tx queue operation is configured (TXBC[TFQM] = 1)
+    bit_offset: 0
+    bit_size: 6
+  - name: TFGI
+    description: Tx FIFO get index. Tx FIFO read index pointer, range 0 to 3. Read as 0 when Tx queue operation is configured (TXBC.TFQM = 1)
+    bit_offset: 8
+    bit_size: 5
+  - name: TFQPI
+    description: Tx FIFO/queue put index. Tx FIFO/queue write index pointer, range 0 to 3
+    bit_offset: 16
+    bit_size: 5
+  - name: TFQF
+    description: Tx FIFO/queue full
+    bit_offset: 21
+    bit_size: 1
+fieldset/XIDAM:
+  description: FDCAN extended ID and mask register
+  fields:
+  - name: EIDM
+    description: Extended ID mask. For acceptance filtering of extended frames the Extended ID AND Mask is AND-ed with the Message ID of a received frame. Intended for masking of 29-bit IDs in SAE J1939. With the reset value of all bits set to 1 the mask is not active.  These are protected write (P) bits, which means that write access by the bits is possible only when the bit 1 [CCE] and bit 0 [INIT] of CCCR register are set to 1
+    bit_offset: 0
+    bit_size: 29
+fieldset/XIDFC:
+  description: FDCAN extended ID filter configuration register
+  fields:
+  - name: FLESA
+    description: Filter list extended start address
+    bit_offset: 2
+    bit_size: 14
+  - name: LSE
+    description: List size extended
+    bit_offset: 16
+    bit_size: 8
+    enum: LSE
+enum/ACT:
+  bit_size: 2
+  variants:
+  - name: SYNC
+    description: 'Synchronizing: node is synchronizing on CAN communication.'
+    value: 0
+  - name: IDLE
+    description: 'Idle: node is neither receiver nor transmitter.'
+    value: 1
+  - name: RX
+    description: 'Receiver: node is operating as receiver.'
+    value: 2
+  - name: TX
+    description: 'Transmitter: node is operating as transmitter.'
+    value: 3
+enum/ANFE:
+  bit_size: 2
+  variants:
+  - name: ACCEPT_FIFO_0
+    description: Accept in Rx FIFO 0
+    value: 0
+  - name: ACCEPT_FIFO_1
+    description: Accept in Rx FIFO 1
+    value: 1
+  - name: REJECT
+    description: Reject
+    value: 2
+enum/ANFS:
+  bit_size: 2
+  variants:
+  - name: ACCEPT_FIFO_0
+    description: Accept in Rx FIFO 0
+    value: 0
+  - name: ACCEPT_FIFO_1
+    description: Accept in Rx FIFO 1
+    value: 1
+  - name: REJECT
+    description: Reject
+    value: 2
+enum/CALS:
+  bit_size: 2
+  variants:
+    - name: B_0x0
+      description: Not_Calibrated
+      value: 0
+    - name: B_0x1
+      description: Basic_Calibrated
+      value: 1
+    - name: B_0x2
+      description: Precision_Calibrated
+      value: 2
+enum/CCM:
+  bit_size: 6
+  variants:
+    - name: B_0x00
+      description: 1 basic cycle per matrix cycle
+      value: 0
+    - name: B_0x01
+      description: 2 basic cycles per matrix cycle
+      value: 1
+    - name: B_0x03
+      description: 4 basic cycles per matrix cycle
+      value: 3
+    - name: B_0x07
+      description: 8 basic cycles per matrix cycle
+      value: 7
+    - name: B_0x0F
+      description: 16 basic cycles per matrix cycle
+      value: 15
+    - name: B_0x1F
+      description: 32 basic cycles per matrix cycle
+      value: 31
+    - name: B_0x3F
+      description: 64 basic cycles per matrix cycle
+      value: 63
+enum/CDIV:
+  bit_size: 4
+  variants:
+  - name: DIV_1
+    description: Divide by 1
+    value: 0
+  - name: DIV_2
+    description: Divide by 2
+    value: 1
+  - name: DIV_4
+    description: Divide by 4
+    value: 2
+  - name: DIV_6
+    description: Divide by 6
+    value: 3
+  - name: DIV_8
+    description: Divide by 8
+    value: 4
+  - name: DIV_10
+    description: Divide by 10
+    value: 5
+  - name: DIV_12
+    description: Divide by 12
+    value: 6
+  - name: DIV_14
+    description: Divide by 14
+    value: 7
+  - name: DIV_16
+    description: Divide by 16
+    value: 8
+  - name: DIV_18
+    description: Divide by 18
+    value: 9
+  - name: DIV_20
+    description: Divide by 20
+    value: 10
+  - name: DIV_22
+    description: Divide by 22
+    value: 11
+  - name: DIV_24
+    description: Divide by 24
+    value: 12
+  - name: DIV_26
+    description: Divide by 26
+    value: 13
+  - name: DIV_28
+    description: Divide by 28
+    value: 14
+  - name: DIV_30
+    description: Divide by 30
+    value: 15
+enum/CSS:
+  bit_size: 2
+  variants:
+    - name: B_0x0
+      description: No sync pulse
+      value: 0
+    - name: B_0x1
+      description: Sync pulse at start of basic cycle
+      value: 1
+    - name: B_0x2
+      description: Sync pulse at start of matrix cycle
+      value: 2
+enum/DC:
+  bit_size: 14
+  variants:
+    - name: B_0x0000
+      description: Illegal value
+      value: 0
+enum/DMS:
+  bit_size: 2
+  variants:
+    - name: B_0x0
+      description: Idle state, wait for reception of debug messages
+      value: 0
+    - name: B_0x1
+      description: Debug message A received
+      value: 1
+    - name: B_0x2
+      description: Debug messages A, B received
+      value: 2
+    - name: B_0x3
+      description: Debug messages A, B, C received
+      value: 3
+enum/EFS:
+  bit_size: 6
+  variants:
+    - name: B_0x0
+      description: Tx event FIFO disabled
+      value: 0
+enum/EFWM:
+  bit_size: 6
+  variants:
+    - name: B_0x0
+      description: Watermark interrupt disabled
+      value: 0
+enum/EL:
+  bit_size: 2
+  variants:
+    - name: B_0x0
+      description: Severity 0 - No error
+      value: 0
+    - name: B_0x1
+      description: Severity 1 - Warning
+      value: 1
+    - name: B_0x2
+      description: Severity 2 - error
+      value: 2
+    - name: B_0x3
+      description: Severity 3 - Severe error
+      value: 3
+enum/EVTSEL:
+  bit_size: 2
+  variants:
+    - name: B_0x0
+      description: fdcan1_evt0
+      value: 0
+    - name: B_0x1
+      description: fdcan1_evt1
+      value: 1
+    - name: B_0x2
+      description: fdcan1_evt2
+      value: 2
+    - name: B_0x3
+      description: fdcan1_evt3
+      value: 3
+enum/F0DS:
+  bit_size: 3
+  variants:
+    - name: B_0x0
+      description: 8-byte data field
+      value: 0
+    - name: B_0x1
+      description: 12-byte data field
+      value: 1
+    - name: B_0x2
+      description: 16-byte data field
+      value: 2
+    - name: B_0x3
+      description: 20-byte data field
+      value: 3
+    - name: B_0x4
+      description: 24-byte data field
+      value: 4
+    - name: B_0x5
+      description: 32-byte data field
+      value: 5
+    - name: B_0x6
+      description: 48-byte data field
+      value: 6
+    - name: B_0x7
+      description: 64-byte data field
+      value: 7
+enum/FS:
+  bit_size: 7
+  variants:
+    - name: B_0x0
+      description: No Rx FIFO 0
+      value: 0
+enum/FWM:
+  bit_size: 7
+  variants:
+    - name: B_0x0
+      description: Watermark interrupt disabled
+      value: 0
+enum/F1DS:
+  bit_size: 3
+  variants:
+    - name: B_0x0
+      description: 8-byte data field
+      value: 0
+    - name: B_0x1
+      description: 12-byte data field
+      value: 1
+    - name: B_0x2
+      description: 16-byte data field
+      value: 2
+    - name: B_0x3
+      description: 20-byte data field
+      value: 3
+    - name: B_0x4
+      description: 24-byte data field
+      value: 4
+    - name: B_0x5
+      description: 32-byte data field
+      value: 5
+    - name: B_0x6
+      description: 48-byte data field
+      value: 6
+    - name: B_0x7
+      description: 64-byte data field
+      value: 7
+enum/LEC:
+  bit_size: 3
+  variants:
+    - name: B_0x0
+      description: 'No error: No error occurred since LEC has been reset by successful reception or transmission.'
+      value: 0
+    - name: B_0x1
+      description: 'Stuff error: More than 5 equal bits in a sequence have occurred in a part of a received message where this is not allowed.'
+      value: 1
+    - name: B_0x2
+      description: 'Form error: A fixed format part of a received frame has the wrong format.'
+      value: 2
+    - name: B_0x3
+      description: 'AckError: The message transmitted by the FDCAN was not acknowledged by another node.'
+      value: 3
+    - name: B_0x4
+      description: 'Bit1Error: During the transmission of a message (with the exception of the arbitration field), the device wanted to send a recessive level (bit of logical value 1), but the monitored bus value was dominant.'
+      value: 4
+    - name: B_0x5
+      description: 'Bit0Error: During the transmission of a message (or acknowledge bit, or active error flag, or overload flag), the device wanted to send a dominant level (data or identifier bit logical value 0), but the monitored bus value was recessive. During Bus_Off recovery this status is set each time a sequence of 11 recessive bits has been monitored. This enables the CPU to monitor the proceeding of the Bus_Off recovery sequence (indicating the bus is not stuck at dominant or continuously disturbed).'
+      value: 5
+    - name: B_0x6
+      description: 'CRCError: The CRC check sum of a received message was incorrect. The CRC of an incoming message does not match with the CRC calculated from the received data.'
+      value: 6
+    - name: B_0x7
+      description: 'NoChange: Any read access to the protocol status register re-initializes the LEC to 7. When the LEC shows the value 7, no CAN bus event was detected since the last CPU read access to the protocol status register.'
+      value: 7
+enum/LSE:
+  bit_size: 8
+  variants:
+    - name: B_0x0
+      description: No extended message ID filter
+      value: 0
+enum/LSS:
+  bit_size: 8
+  variants:
+    - name: B_0x0
+      description: No standard message ID filter
+      value: 0
+enum/MS:
+  bit_size: 2
+  variants:
+    - name: B_0x0
+      description: Master_Off, no master properties relevant
+      value: 0
+    - name: B_0x1
+      description: Operating as time Slave
+      value: 1
+    - name: B_0x2
+      description: Operating as backup time master
+      value: 2
+    - name: B_0x3
+      description: Operating as current time master
+      value: 3
+enum/MSI:
+  bit_size: 2
+  variants:
+    - name: B_0x0
+      description: No FIFO selected
+      value: 0
+    - name: B_0x1
+      description: FIFO overrun
+      value: 1
+    - name: B_0x2
+      description: Message stored in FIFO 0
+      value: 2
+    - name: B_0x3
+      description: Message stored in FIFO 1
+      value: 3
+enum/NAV:
+  bit_size: 18
+  variants:
+    - name: B_0x0EFFF
+      description: illegal value
+      value: 61439
+    - name: B_0x21000
+      description: illegal value
+      value: 135168
+enum/NDTB:
+  bit_size: 6
+  variants:
+    - name: B_0x0
+      description: No dedicated Tx buffers
+      value: 0
+enum/OM:
+  bit_size: 2
+  variants:
+    - name: B_0x0
+      description: Event-driven CAN communication, default
+      value: 0
+    - name: B_0x1
+      description: TTCAN level 1
+      value: 1
+    - name: B_0x2
+      description: TTCAN level 2
+      value: 2
+    - name: B_0x3
+      description: TTCAN level 0
+      value: 3
+enum/RBDS:
+  bit_size: 3
+  variants:
+    - name: B_0x0
+      description: 8-byte data field
+      value: 0
+    - name: B_0x1
+      description: 12-byte data field
+      value: 1
+    - name: B_0x2
+      description: 16-byte data field
+      value: 2
+    - name: B_0x3
+      description: 20-byte data field
+      value: 3
+    - name: B_0x4
+      description: 24-byte data field
+      value: 4
+    - name: B_0x5
+      description: 32-byte data field
+      value: 5
+    - name: B_0x6
+      description: 48-byte data field
+      value: 6
+    - name: B_0x7
+      description: 64-byte data field
+      value: 7
+enum/SWS:
+  bit_size: 2
+  variants:
+    - name: B_0x0
+      description: Stop watch disabled
+      value: 0
+    - name: B_0x1
+      description: Actual value of cycle time is copied to TTCPT.SWV
+      value: 1
+    - name: B_0x2
+      description: Actual value of local time is copied to TTCPT.SWV
+      value: 2
+    - name: B_0x3
+      description: Actual value of global time is copied to TTCPT.SWV
+      value: 3
+enum/SWTDEL:
+  bit_size: 2
+  variants:
+    - name: B_0x0
+      description: fdcan1_swt0
+      value: 0
+    - name: B_0x1
+      description: fdcan1_swt1
+      value: 1
+    - name: B_0x2
+      description: fdcan1_swt2
+      value: 2
+    - name: B_0x3
+      description: fdcan1_swt3
+      value: 3
+enum/SYS:
+  bit_size: 2
+  variants:
+  - name: B_0x0
+    description: Out of Synchronization
+    value: 0
+  - name: B_0x1
+    description: Synchronizing to FDCAN communication
+    value: 1
+  - name: B_0x2
+    description: Schedule suspended by gap (In_Gap)
+    value: 2
+  - name: B_0x3
+    description: Synchronized to schedule (In_Schedule)
+    value: 3
+enum/TBDS:
+  bit_size: 3
+  variants:
+  - name: B_0x0
+    description: 8-byte data field
+    value: 0
+  - name: B_0x1
+    description: 12-byte data field
+    value: 1
+  - name: B_0x2
+    description: 16-byte data field
+    value: 2
+  - name: B_0x3
+    description: 20-byte data field
+    value: 3
+  - name: B_0x4
+    description: 24-byte data field
+    value: 4
+  - name: B_0x5
+    description: 32-byte data field
+    value: 5
+  - name: B_0x6
+    description: 48-byte data field
+    value: 6
+  - name: B_0x7
+    description: 64-byte data field
+    value: 7
+enum/TFQM:
+  bit_size: 1
+  variants:
+  - name: FIFO
+    description: Tx FIFO operation
+    value: 0
+  - name: QUEUE
+    description: Tx queue operation
+    value: 1
+enum/TMC:
+  bit_size: 2
+  variants:
+  - name: B_0x0
+    description: No Register time mark interrupt generated
+    value: 0
+  - name: B_0x1
+    description: Register time mark interrupt if time mark = cycle time
+    value: 1
+  - name: B_0x2
+    description: Register time mark interrupt if time mark = local time
+    value: 2
+  - name: B_0x3
+    description: Register time mark interrupt if time mark = global time
+    value: 3
+enum/TOS:
+  bit_size: 2
+  variants:
+  - name: CONTINUOUS
+    description: Continuous operation
+    value: 0
+  - name: TX_EVENT_FIFO
+    description: Timeout controlled by Tx event FIFO
+    value: 1
+  - name: RX_FIFO_0
+    description: Timeout controlled by Rx FIFO 0
+    value: 2
+  - name: RX_FIFO_1
+    description: Timeout controlled by Rx FIFO 1
+    value: 3
+enum/TSS:
+  bit_size: 2
+  variants:
+  - name: ZERO
+    description: Timestamp counter value always 0x0000
+    value: 0
+  - name: INCREMENT
+    description: Timestamp counter value incremented according to TCP
+    value: 1
+  - name: EXTERNAL
+    description: External timestamp counter from TIM3 value (tim3_cnt[0:15])
+    value: 2
+enum/TX:
+  bit_size: 2
+  variants:
+  - name: RESET
+    description: Reset value, FDCANx_TX TX is controlled by the CAN core, updated at the end of the CAN bit time
+    value: 0
+  - name: SAMPLE_POINT
+    description: Sample point can be monitored at pin FDCANx_TX
+    value: 1
+  - name: DOMINANT
+    description: Dominant (0) level at pin FDCANx_TX
+    value: 2
+  - name: RECESSIVE
+    description: Recessive (1) at pin FDCANx_TX
+    value: 3
